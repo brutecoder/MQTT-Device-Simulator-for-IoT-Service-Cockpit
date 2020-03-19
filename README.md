@@ -7,22 +7,23 @@ Steps to use this Tool are as follows :
 2. In the "certificate" folder replace the PEM certificate with your generated PEM certificate & rename it as "device1_certificate.pem".
 3. Open "device1_passphrase.txt" , and enter the secret key you got during the PEM certificate generation on IoT Service Cockpit.
 4. Replace or copy paste your required CSV data in "data.csv", make sure you don't rename it to something else, keep it as "data.csv".
-5. Now, time to make some changes to "csv_to_mqtt.js", as per your device. I have defined 2 fields in code for testing namely, temperature    & humidity. You , need to add your device specific fields on line 11, 12, 13, 14.
+5. Now, time to make some changes to "csv_to_mqtt.js", as per your device. I have defined 2 fields in code for testing namely,
+   temperature & humidity. You , need to add your device specific fields on line 11, 12, 13, 14.
    const HOST_ADDRESS = ""; // Replace with your IoT Service instance
    const DEVICE_ALTERNATE_ID = "";
    const SENSOR_ALTERNATE_ID = "";
    const CAPABILITY_ALTERNATE_ID = "";
-   On line number 24 you will find below code :
+6. On line number 24 you will find below code :
                                                      await timeout(5000)
                                                      Replace "5000" with desired interval time 1000 = 1 seconds
-   On line number 27 you will find below code :
+7. On line number 27 you will find below code :
                                                      var lastData = {
                                                         Temperature: jsonArray[myKey].Temperature,
                                                         Humidity: jsonArray[myKey].Humidity,
 
                                                       }
                                                       You replace Temp & Hum or can add more required fields.
-   Final Changes to be made on line number 35 :
+8. Final Changes to be made on line number 35 :
                                                      measures: [
                                                               lastData.Temperature, lastData.Humidity
                                                           ]
