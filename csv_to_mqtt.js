@@ -8,7 +8,7 @@ csv()
 .fromFile(csvFilePath)
 .then((jsonObj)=>{
 })
-const HOST_ADDRESS = ""; // Replace with your IoT Service instance
+const HOST_ADDRESS = ""; // Replace with your IoT Service instance, make sure you remove "https://" from front
 const DEVICE_ALTERNATE_ID = "";
 const SENSOR_ALTERNATE_ID = "";
 const CAPABILITY_ALTERNATE_ID = "";
