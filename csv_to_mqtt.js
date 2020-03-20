@@ -22,7 +22,7 @@ async function sendDataViaMQTT() {
 const jsonArray=await csv().fromFile(csvFilePath);
 for(var myKey in jsonArray) {
 	  await timeout(5000)
-      console.log("key:"+myKey+", value:"+jsonArray[myKey].Area);
+      console.log("key:"+myKey+", value:"+jsonArray[myKey].Temperature); //Replace "Temperature" with you Variable
 	  //MQTT_Push
 		var lastData = {
 			Temperature: jsonArray[myKey].Temperature,
