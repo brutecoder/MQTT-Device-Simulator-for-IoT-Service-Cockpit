@@ -11,7 +11,7 @@ Steps to use this Tool are as follows :
    temperature & humidity. 
    You , need to add your device specific fields on line 11, 12, 13, 14.
    
-   const HOST_ADDRESS = ""; // Replace with your IoT Service instance
+   const HOST_ADDRESS = ""; // Replace with your IoT Service instance, make sure you remove "https://" from front
    
    const DEVICE_ALTERNATE_ID = "";
    
